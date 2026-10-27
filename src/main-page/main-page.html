@@ -1,0 +1,33 @@
+<div class="content">
+  <header class="">
+    <div class="logo"></div>
+    <nav>
+      @for(item of navItems; track item) {
+        <div>
+          <a [href]="'#' + item">{{item}}</a>
+        </div>
+      }
+    </nav>
+    <button>
+      <p>Contato</p>
+    </button>
+  </header>
+
+  <section id="#inicio">
+    <div class="side-right">
+      <div class="div-ano-gene">
+        <p>Desde 1984</p>
+      </div>
+      <h1>Conheça a BR Voice</h1>
+      <p>Solucoes completas para ...</p>
+      <div class="btns">
+        <button>Fale com um especialista</button>
+        <button>Ver Produtos e Serviços</button>
+      </div>
+    </div>
+    <div class="side-left"></div>
+  </section>
+
+  <section></section>
+
+</div>
