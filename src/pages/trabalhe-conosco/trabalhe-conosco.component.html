@@ -1,0 +1,213 @@
+<div class="job-page">
+  <header class="job-header">
+    <div class="header-content">
+      <a routerLink="/" class="logo">
+        <span class="logo-mark">
+          <svg viewBox="0 0 30 30">
+            <circle cx="9" cy="21" r="6"></circle>
+            <circle cx="20" cy="10" r="8"></circle>
+          </svg>
+        </span>
+        <span>BR<span>Voice</span></span>
+      </a>
+
+      <a routerLink="/" class="back-home">
+        <svg viewBox="0 0 24 24" fill="none">
+          <path
+            d="M15 18 9 12l6-6"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+        Voltar ao início
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <section class="job-hero">
+      <div class="job-hero-grid"></div>
+
+      <div class="job-hero-content">
+        <div class="job-badge">
+          <span></span>
+          Carreiras
+        </div>
+
+        <h1>Trabalhe <strong>conosco.</strong></h1>
+
+        <p>Envie-nos seu currículo preenchendo o formulário abaixo.</p>
+      </div>
+    </section>
+
+    <section class="job-form-section">
+      @if (sent) {
+        <div class="job-card job-success">
+          <div class="success-icon">✓</div>
+
+          <h2>Currículo recebido!</h2>
+
+          <p>
+            Recebemos seus dados. Nossa equipe entrará em contato caso haja uma vaga compatível.
+          </p>
+
+          <button type="button" class="btn" (click)="novoEnvio()">Enviar outro currículo</button>
+        </div>
+      } @else {
+        <div class="job-card">
+          <div class="form-grid">
+            <label>
+              <span>Nome completo</span>
+              <input
+                [(ngModel)]="f.nome"
+                name="nome"
+                placeholder="Seu nome completo"
+                autocomplete="name"
+                [class.invalid]="getError('nome')"
+                (blur)="touch('nome')"
+              />
+              @if (getError('nome')) {
+                <small class="error">{{ getError('nome') }}</small>
+              }
+            </label>
+
+            <label>
+              <span>E-mail</span>
+              <input
+                type="email"
+                [(ngModel)]="f.email"
+                name="email"
+                placeholder="voce@email.com"
+                autocomplete="email"
+                [class.invalid]="getError('email')"
+                (blur)="touch('email')"
+              />
+              @if (getError('email')) {
+                <small class="error">{{ getError('email') }}</small>
+              }
+            </label>
+
+            <label>
+              <span>Telefone</span>
+              <input
+                type="tel"
+                inputmode="numeric"
+                [ngModel]="f.tel"
+                name="tel"
+                placeholder="(00) 00000-0000"
+                autocomplete="tel"
+                maxlength="15"
+                [class.invalid]="getError('tel')"
+                (input)="onTel($event)"
+                (blur)="touch('tel')"
+              />
+              @if (getError('tel')) {
+                <small class="error">{{ getError('tel') }}</small>
+              }
+            </label>
+
+            <label class="full">
+              <span>Resumo</span>
+              <textarea
+                [(ngModel)]="f.resumo"
+                name="resumo"
+                rows="5"
+                maxlength="1000"
+                placeholder="Conte um pouco sobre sua experiência e seu interesse."
+                [class.invalid]="getError('resumo')"
+                (blur)="touch('resumo')"
+              ></textarea>
+              <div class="field-foot">
+                @if (getError('resumo')) {
+                  <small class="error">{{ getError('resumo') }}</small>
+                } @else {
+                  <span></span>
+                }
+                <small class="counter">{{ f.resumo.length }}/1000</small>
+              </div>
+            </label>
+
+            <div class="full">
+              <span class="field-label">Currículo</span>
+
+              <div class="file-box" [class.invalid]="getError('cv')">
+                <input
+                  #cvInput
+                  id="cv"
+                  type="file"
+                  accept=".pdf,.doc,.docx"
+                  (change)="onFile($event)"
+                />
+
+                <label for="cv" class="file-btn">
+                  <svg viewBox="0 0 24 24">
+                    <path
+                      d="M21 12.5 12.5 21a5.5 5.5 0 0 1-8-8L13 4.5a3.5 3.5 0 0 1 5 5L9.5 18a1.5 1.5 0 0 1-2-2L15 8.5"
+                    ></path>
+                  </svg>
+                  Anexar CV
+                </label>
+
+                @if (cv) {
+                  <div class="file-info">
+                    <strong>{{ cv.name }}</strong>
+                    <small>{{ formatSize(cv.size) }}</small>
+                  </div>
+
+                  <button
+                    type="button"
+                    class="file-remove"
+                    aria-label="Remover arquivo"
+                    (click)="removeFile(cvInput)"
+                  >
+                    ✕
+                  </button>
+                } @else {
+                  <span class="file-empty">Nenhum arquivo selecionado ainda</span>
+                }
+              </div>
+
+              <small class="hint">Formatos aceitos: PDF, DOC ou DOCX, até 5 MB.</small>
+
+              @if (getError('cv')) {
+                <small class="error">{{ getError('cv') }}</small>
+              }
+            </div>
+          </div>
+
+          <label class="privacy">
+            <input type="checkbox" [(ngModel)]="f.ok" name="ok" (change)="touch('ok')" />
+            <span>
+              Li e aceito os termos de
+              <a routerLink="/politica-privacidade">política de privacidade</a>.
+            </span>
+          </label>
+
+          @if (getError('ok')) {
+            <small class="error privacy-error">{{ getError('ok') }}</small>
+          }
+
+          <button type="button" class="btn submit-btn" (click)="enviar()">
+            Enviar
+            <svg viewBox="0 0 24 24">
+              <path d="M5 12h14M13 6l6 6-6 6"></path>
+            </svg>
+          </button>
+        </div>
+      }
+    </section>
+  </main>
+
+  <footer class="job-footer">
+    <span>© 2026 BR Voice. Todos os direitos reservados.</span>
+    <div class="footer-credit">
+      <span>Desenvolvido por</span>
+      <a href="https://www.linkedin.com/in/pedrogalvao0" target="_blank" rel="noopener">
+        Pedro Galvão
+      </a>
+    </div>
+    <a routerLink="/politica-privacidade">Política de Privacidade</a>
+  </footer>
+</div>

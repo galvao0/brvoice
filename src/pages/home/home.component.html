@@ -1,0 +1,689 @@
+<header class="nav" [class.scrolled]="scrolled" [class.menu-open]="mobileMenuOpen">
+  <a href="#inicio" class="logo" (click)="closeMobileMenu()">
+    <span class="logo-mark">
+      <svg viewBox="0 0 30 30">
+        <circle cx="9" cy="21" r="6"></circle>
+        <circle cx="20" cy="10" r="8"></circle>
+      </svg>
+    </span>
+    <span>BR<span>Voice</span></span>
+  </a>
+
+  <nav>
+    @for (m of menu; track m.label) {
+      @if (m.route) {
+        <a [routerLink]="m.route" (click)="closeMobileMenu()">{{ m.label }}</a>
+      } @else {
+        <a [href]="m.href" (click)="closeMobileMenu()">{{ m.label }}</a>
+      }
+    }
+  </nav>
+
+  <a [href]="whatsappUrl" target="_blank" rel="noopener" class="btn client-btn">
+    Entre em Contato
+    <svg viewBox="0 0 24 24">
+      <path d="M5 12h14M13 6l6 6-6 6"></path>
+    </svg>
+  </a>
+
+  <button
+    class="mobile-menu"
+    [class.active]="mobileMenuOpen"
+    aria-label="Abrir menu"
+    [attr.aria-expanded]="mobileMenuOpen"
+    (click)="toggleMobileMenu()"
+  >
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  @if (mobileMenuOpen) {
+    <div class="mobile-nav">
+      <div class="mobile-nav-links">
+        @for (m of menu; track m.label) {
+          @if (m.route) {
+            <a [routerLink]="m.route" (click)="closeMobileMenu()">
+              <span>{{ m.label }}</span>
+              <svg viewBox="0 0 24 24">
+                <path d="M5 12h14M13 6l6 6-6 6"></path>
+              </svg>
+            </a>
+          } @else {
+            <a [href]="m.href" (click)="closeMobileMenu()">
+              <span>{{ m.label }}</span>
+              <svg viewBox="0 0 24 24">
+                <path d="M5 12h14M13 6l6 6-6 6"></path>
+              </svg>
+            </a>
+          }
+        }
+      </div>
+
+      <a
+        [href]="whatsappUrl"
+        target="_blank"
+        rel="noopener"
+        class="btn mobile-contact"
+        (click)="closeMobileMenu()"
+      >
+        Entre em Contato
+        <svg viewBox="0 0 24 24">
+          <path d="M5 12h14M13 6l6 6-6 6"></path>
+        </svg>
+      </a>
+    </div>
+  }
+</header>
+
+<section id="inicio" class="hero">
+  <div class="hero-grid"></div>
+  <div class="hero-glow glow-one"></div>
+  <div class="hero-glow glow-two"></div>
+
+  <svg class="net" viewBox="0 0 800 600" aria-hidden="true">
+    <g class="network-lines">
+      <path d="M100 120L300 200L520 90L700 240L560 400L320 360L120 460"></path>
+      <path d="M300 200L320 360"></path>
+      <path d="M520 90L560 400"></path>
+      <path d="M120 460L320 360"></path>
+    </g>
+
+    <g class="network-points">
+      <circle cx="100" cy="120" r="5"></circle>
+      <circle cx="300" cy="200" r="8" class="pulse"></circle>
+      <circle cx="520" cy="90" r="5"></circle>
+      <circle cx="700" cy="240" r="7" class="pulse p2"></circle>
+      <circle cx="560" cy="400" r="5"></circle>
+      <circle cx="320" cy="360" r="7" class="pulse p3"></circle>
+      <circle cx="120" cy="460" r="5"></circle>
+    </g>
+  </svg>
+
+  <div class="hero-content">
+    <div class="hero-badge">
+      <span></span>
+      Tecnologia para operações críticas
+    </div>
+
+    <h1>
+      Tecnologia que
+      <strong>protege.</strong>
+      Conectividade que
+      <strong>impulsiona.</strong>
+    </h1>
+
+    <p>
+      Segurança eletrônica, infraestrutura de redes, comunicação e inteligência artificial para
+      empresas que precisam operar com confiança.
+    </p>
+
+    <div class="hero-actions">
+      <a [href]="whatsappUrl" target="_blank" rel="noopener" class="btn">
+        Falar com especialista
+        <svg viewBox="0 0 24 24">
+          <path d="M5 12h14M13 6l6 6-6 6"></path>
+        </svg>
+      </a>
+
+      <a href="#produtos" class="btn ghost">Conhecer soluções</a>
+    </div>
+
+    <div class="hero-trust">
+      <span>Especialistas em</span>
+
+      <div>
+        <span>Segurança</span>
+        <span>Redes</span>
+        <span>IA</span>
+        <span>Comunicação</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-card">
+    <div class="hero-card-top">
+      <span class="status-dot"></span>
+      Operação protegida
+      <span class="live">LIVE</span>
+    </div>
+
+    <div class="monitor">
+      <div class="monitor-grid"></div>
+
+      <div class="face-box box-one">
+        <span>Pessoa</span>
+        <small>98.4%</small>
+      </div>
+
+      <div class="face-box box-two">
+        <span>Veículo</span>
+        <small>96.8%</small>
+      </div>
+
+      <div class="scan-line"></div>
+    </div>
+
+    <div class="hero-card-footer">
+      <div>
+        <strong>IA ativa</strong>
+        <span>Detecção em tempo real</span>
+      </div>
+
+      <div class="signal">
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="numbers">
+  <div class="number-item">
+    <strong>+20</strong>
+    <span>anos de experiência</span>
+  </div>
+
+  <div class="number-item">
+    <strong>+100</strong>
+    <span>projetos realizados</span>
+  </div>
+
+  <div class="number-item">
+    <strong>24/7</strong>
+    <span>operação e monitoramento</span>
+  </div>
+
+  <div class="number-item">
+    <strong>+12</strong>
+    <span>parceiros estratégicos</span>
+  </div>
+</section>
+
+<section id="produtos" class="sec products-section">
+  <div class="section-heading">
+    <div>
+      <span class="eyebrow">NOSSAS SOLUÇÕES</span>
+      <h2>Tecnologia para cada etapa da sua operação.</h2>
+    </div>
+
+    <p>
+      Integramos segurança, infraestrutura e comunicação para criar ambientes mais inteligentes,
+      conectados e preparados para o futuro.
+    </p>
+  </div>
+
+  <div class="products-grid">
+    @for (p of products; track p.n) {
+      <article class="product-card">
+        <div class="card-number">0{{ $index + 1 }}</div>
+
+        <div class="product-icon">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.7"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path [attr.d]="p.i"></path>
+          </svg>
+        </div>
+
+        <div class="product-content">
+          <h3>{{ p.n }}</h3>
+          <p>{{ p.d }}</p>
+        </div>
+
+        <a [href]="whatsappUrl" target="_blank" rel="noopener" class="arrow-link">
+          Conhecer solução
+          <svg viewBox="0 0 24 24">
+            <path d="M5 12h14M13 6l6 6-6 6"></path>
+          </svg>
+        </a>
+      </article>
+    }
+  </div>
+</section>
+
+<section class="ai-section">
+  <div class="ai-content">
+    <span class="eyebrow light">INTELIGÊNCIA ARTIFICIAL</span>
+
+    <h2>Inteligência que transforma imagens em decisões.</h2>
+
+    <p>
+      Utilizamos tecnologias de visão computacional para transformar câmeras e sensores em
+      ferramentas inteligentes para sua operação.
+    </p>
+
+    <a [href]="whatsappUrl" target="_blank" rel="noopener" class="btn white-btn">
+      Falar com especialista
+      <svg viewBox="0 0 24 24">
+        <path d="M5 12h14M13 6l6 6-6 6"></path>
+      </svg>
+    </a>
+  </div>
+
+  <div class="ai-panel">
+    <div class="ai-panel-header">
+      <div>
+        <span class="status-dot"></span>
+        Sistema inteligente
+      </div>
+
+      <span>ONLINE</span>
+    </div>
+
+    <div class="ai-screen">
+      <div class="camera-frame">
+        <span class="corner tl"></span>
+        <span class="corner tr"></span>
+        <span class="corner bl"></span>
+        <span class="corner br"></span>
+
+        <div class="detected-person">
+          <span>PESSOA</span>
+          <strong>98.4%</strong>
+        </div>
+
+        <div class="detected-car">
+          <span>VEÍCULO</span>
+          <strong>96.8%</strong>
+        </div>
+
+        <div class="camera-scan"></div>
+      </div>
+    </div>
+
+    <div class="ai-features">
+      @for (a of ai; track a) {
+        <div>
+          <span class="feature-check">✓</span>
+          {{ a }}
+        </div>
+      }
+    </div>
+  </div>
+</section>
+
+<section id="setores" class="sec sectors-section">
+  <div class="section-heading">
+    <div>
+      <span class="eyebrow">SEGMENTOS</span>
+      <h2>Soluções pensadas para diferentes operações.</h2>
+      <p>
+        Entendemos os desafios de cada setor para entregar tecnologia alinhada às necessidades do
+        negócio.
+      </p>
+    </div>
+  </div>
+
+  <div class="sector-grid">
+    @for (s of sectors; track s.n) {
+      <article class="sector-card">
+        <div class="sector-top">
+          <span>0{{ $index + 1 }}</span>
+
+          <svg viewBox="0 0 24 24">
+            <path d="M5 12h14M13 6l6 6-6 6"></path>
+          </svg>
+        </div>
+
+        <div>
+          <span class="sector-label">SETOR</span>
+          <h3>{{ s.n }}</h3>
+          <p>{{ s.d }}</p>
+        </div>
+
+        <a [href]="whatsappUrl" target="_blank" rel="noopener"> Conhecer solução </a>
+      </article>
+    }
+  </div>
+</section>
+
+<section id="sobre" class="sec about-section">
+  <div class="about-intro">
+    <span class="eyebrow">POR QUE BR VOICE</span>
+
+    <h2>
+      Uma operação.
+      <span>Múltiplas tecnologias.</span>
+    </h2>
+
+    <p>
+      Unimos conhecimento técnico, tecnologia e atendimento especializado para construir soluções
+      que acompanham a evolução da sua empresa.
+    </p>
+
+    <a [href]="whatsappUrl" target="_blank" rel="noopener" class="text-link">
+      Conheça a BR Voice
+      <svg viewBox="0 0 24 24">
+        <path d="M5 12h14M13 6l6 6-6 6"></path>
+      </svg>
+    </a>
+  </div>
+
+  <div class="about-list">
+    <div class="about-item">
+      <span>01</span>
+
+      <div>
+        <h3>Projeto personalizado</h3>
+        <p>Soluções desenhadas de acordo com a realidade e os objetivos de cada operação.</p>
+      </div>
+    </div>
+
+    <div class="about-item">
+      <span>02</span>
+
+      <div>
+        <h3>Monitoramento inteligente</h3>
+        <p>Dados, sensores e inteligência artificial trabalhando em tempo real.</p>
+      </div>
+    </div>
+
+    <div class="about-item">
+      <span>03</span>
+
+      <div>
+        <h3>Suporte especializado</h3>
+        <p>Equipe preparada para manter sua operação funcionando com segurança.</p>
+      </div>
+    </div>
+
+    <div class="about-item">
+      <span>04</span>
+
+      <div>
+        <h3>Integração</h3>
+        <p>Segurança, redes e comunicação trabalhando dentro de uma única estrutura.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec clients-section">
+  <div class="section-heading centered">
+    <div>
+      <span class="eyebrow">QUEM CONFIA</span>
+      <h2>Empresas que contam com nossas soluções.</h2>
+    </div>
+  </div>
+
+  <div class="logo-wall">
+    @for (c of clients; track c.n) {
+      <div class="client-logo">
+        <img [src]="c.logo" [alt]="c.n" />
+      </div>
+    }
+  </div>
+</section>
+
+<section id="parceiros" class="sec partners-section">
+  <div class="section-heading centered">
+    <div>
+      <span class="eyebrow">PARCEIROS</span>
+      <h2>Tecnologia de grandes marcas.</h2>
+    </div>
+
+    <p>
+      Trabalhamos com fabricantes e parceiros reconhecidos para entregar soluções confiáveis e
+      escaláveis.
+    </p>
+  </div>
+
+  <div class="logo-wall partner-wall">
+    @for (p of partners; track p.n) {
+      <div class="partner-logo">
+        <img [src]="p.logo" [alt]="p.n" />
+      </div>
+    }
+  </div>
+</section>
+
+<section id="contato" class="contact-section">
+  <div class="contact-content">
+    <div class="contact-copy">
+      <span class="eyebrow light">FALE COM A BR VOICE</span>
+
+      <h2>Vamos conversar sobre a sua operação?</h2>
+
+      <p>
+        Conte um pouco sobre sua necessidade. Nossa equipe está pronta para entender seu cenário e
+        encontrar a melhor solução.
+      </p>
+
+      <div class="contact-info">
+        <div>
+          <span>TELEFONES</span>
+          <a href="tel:+558132442016">(81) 3244-2016</a>
+          <a href="tel:+558131289450">(81) 3128-9450</a>
+        </div>
+
+        <div>
+          <span>E-MAIL</span>
+          <a href="mailto:contato@brvoice.com">contato&#64;brvoice.com</a>
+        </div>
+
+        <div>
+          <span>ENDEREÇO</span>
+          <p>
+            Rua Domingos José Martins, 75<br />
+            Sala 101 — Recife Antigo<br />
+            Recife/PE — CEP 50030-200
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-form-wrapper">
+      @if (sent) {
+        <div class="success">
+          <div class="success-icon">✓</div>
+
+          <h3>Mensagem recebida!</h3>
+
+          <p>Recebemos seus dados. Nossa equipe entrará em contato com você em breve.</p>
+
+          <button class="btn white-btn" (click)="novaMensagem()">Enviar outra mensagem</button>
+        </div>
+      } @else {
+        <div class="contact-form">
+          <div class="form-header">
+            <span>ENTRE EM CONTATO</span>
+            <h3>Conte como podemos ajudar.</h3>
+          </div>
+
+          <div class="form-grid">
+            <label>
+              <span>Nome completo</span>
+              <input
+                [(ngModel)]="f.nome"
+                name="nome"
+                placeholder="Seu nome"
+                autocomplete="name"
+                [class.invalid]="getError('nome')"
+                (blur)="touch('nome')"
+              />
+              @if (getError('nome')) {
+                <small class="error">{{ getError('nome') }}</small>
+              }
+            </label>
+
+            <label>
+              <span>Empresa</span>
+              <input
+                [(ngModel)]="f.empresa"
+                name="empresa"
+                placeholder="Nome da empresa"
+                autocomplete="organization"
+                [class.invalid]="getError('empresa')"
+                (blur)="touch('empresa')"
+              />
+              @if (getError('empresa')) {
+                <small class="error">{{ getError('empresa') }}</small>
+              }
+            </label>
+
+            <label>
+              <span>E-mail corporativo</span>
+              <input
+                type="email"
+                [(ngModel)]="f.email"
+                name="email"
+                placeholder="voce@empresa.com"
+                autocomplete="email"
+                [class.invalid]="getError('email')"
+                (blur)="touch('email')"
+              />
+              @if (getError('email')) {
+                <small class="error">{{ getError('email') }}</small>
+              }
+            </label>
+
+            <label>
+              <span>Telefone</span>
+              <input
+                type="tel"
+                inputmode="numeric"
+                [ngModel]="f.tel"
+                name="tel"
+                placeholder="(00) 00000-0000"
+                autocomplete="tel"
+                maxlength="15"
+                [class.invalid]="getError('tel')"
+                (input)="onTel($event)"
+                (blur)="touch('tel')"
+              />
+              @if (getError('tel')) {
+                <small class="error">{{ getError('tel') }}</small>
+              }
+            </label>
+          </div>
+
+          <label class="privacy">
+            <input type="checkbox" [(ngModel)]="f.ok" name="ok" (change)="touch('ok')" />
+            <a routerLink="/politica-privacidade"
+              >Li e aceito os termos da política de privacidade.</a
+            >
+          </label>
+
+          @if (getError('ok')) {
+            <small class="error privacy-error">{{ getError('ok') }}</small>
+          }
+
+          <button class="btn submit-btn" (click)="enviar()">
+            Enviar mensagem
+
+            <svg viewBox="0 0 24 24">
+              <path d="M5 12h14M13 6l6 6-6 6"></path>
+            </svg>
+          </button>
+        </div>
+      }
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-main">
+    <div class="footer-brand">
+      <a href="#inicio" class="logo">
+        <span class="logo-mark">
+          <svg viewBox="0 0 30 30">
+            <circle cx="9" cy="21" r="6"></circle>
+            <circle cx="20" cy="10" r="8"></circle>
+          </svg>
+        </span>
+
+        <span>BR<span>Voice</span></span>
+      </a>
+
+      <p>Segurança, conectividade e inteligência para empresas que não podem parar.</p>
+
+      <div class="footer-socials">
+        <a href="https://www.linkedin.com/company/br-voice/home/" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24">
+            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6Z"></path>
+            <rect x="2" y="9" width="4" height="12"></rect>
+            <circle cx="4" cy="4" r="2"></circle>
+          </svg>
+        </a>
+
+        <a href="#" aria-label="Instagram">
+          <svg viewBox="0 0 24 24">
+            <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+            <circle cx="12" cy="12" r="4"></circle>
+            <circle cx="17.5" cy="6.5" r="1"></circle>
+          </svg>
+        </a>
+
+        <a href="#" aria-label="Facebook">
+          <svg viewBox="0 0 24 24">
+            <path d="M14 8h3V4h-3c-3.3 0-5 1.7-5 5v3H6v4h3v8h4v-8h3l1-4h-4V9c0-.7.3-1 1-1Z"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-column">
+      <h4>Empresa</h4>
+      <a href="#sobre">Sobre nós</a>
+      <a href="#parceiros">Parceiros</a>
+      <a routerLink="/trabalhe-conosco">Trabalhe conosco</a>
+      <a href="#contato">Contato</a>
+    </div>
+
+    <div class="footer-column">
+      <h4>Soluções</h4>
+      <a href="#produtos">Segurança eletrônica</a>
+      <a href="#produtos">Facilities</a>
+      <a href="#produtos">Redes</a>
+      <a href="#produtos">Comunicação</a>
+    </div>
+
+    <div class="footer-column footer-contact">
+      <h4>Fale conosco</h4>
+
+      <a href="tel:+558132442016">(81) 3244-2016</a>
+
+      <a href="mailto:contato@brvoice.com">contato&#64;brvoice.com</a>
+
+      <a href="https://wa.me/558132442016" target="_blank" rel="noopener" class="footer-whatsapp">
+        <svg viewBox="0 0 24 24">
+          <path d="M20 11.5a8 8 0 0 1-11.8 7L4 20l1.5-4.1A8 8 0 1 1 20 11.5Z"></path>
+          <path
+            d="M8.5 8.5c.3-.4.6-.4.9-.2l1.2 1c.3.2.3.5.1.8l-.5.7c.6 1.1 1.5 2 2.6 2.6l.7-.5c.3-.2.6-.2.8.1l1 1.2c.2.3.2.6-.2.9-.5.5-1.2.7-1.8.5-2.8-.8-5-3-5.8-5.8-.2-.6 0-1.3.5-1.8Z"
+          ></path>
+        </svg>
+
+        <span>Falar pelo WhatsApp</span>
+      </a>
+
+      <span>Recife - PE</span>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <span>© 2026 BR Voice. Todos os direitos reservados.</span>
+
+    <div class="footer-credit">
+      <span>Desenvolvido por</span>
+      <a
+        href="
+https://www.linkedin.com/in/pedrogalvao0"
+        target="_blank"
+        rel="noopener"
+        >Pedro Galvão</a
+      >
+    </div>
+
+    <div class="footer-links">
+      <a routerLink="/politica-privacidade">Política de Privacidade</a>
+    </div>
+  </div>
+</footer>

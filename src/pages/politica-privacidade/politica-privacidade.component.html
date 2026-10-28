@@ -1,0 +1,831 @@
+<div class="privacy-page">
+  <header class="privacy-header">
+    <div class="header-content">
+      <div class="header-brand">
+        <a href="/" class="logo">
+          <span class="logo-mark">
+            <svg viewBox="0 0 30 30">
+              <circle cx="9" cy="21" r="6"></circle>
+              <circle cx="20" cy="10" r="8"></circle>
+            </svg>
+          </span>
+          <span>BR<span>Voice</span></span>
+        </a>
+      </div>
+
+      <a href="/" class="back-home">
+        <svg viewBox="0 0 24 24" fill="none">
+          <path
+            d="M15 18 9 12l6-6"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+        Voltar ao início
+      </a>
+    </div>
+  </header>
+
+  <main class="privacy-main">
+    <section class="hero">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <svg viewBox="0 0 24 24" fill="none">
+            <path
+              d="M12 3 20 6v5.5c0 4.7-3.2 8-8 9.5-4.8-1.5-8-4.8-8-9.5V6l8-3Z"
+              stroke="currentColor"
+              stroke-width="1.7"
+              stroke-linejoin="round"
+            />
+          </svg>
+          Política de Privacidade
+        </div>
+
+        <h1>
+          Sua privacidade é
+          <span>nossa prioridade.</span>
+        </h1>
+
+        <p>Entenda como a BR VOICE coleta, utiliza, armazena e protege seus dados pessoais.</p>
+
+        <div class="hero-date">
+          <svg viewBox="0 0 24 24" fill="none">
+            <path
+              d="M7 3v3M17 3v3M4 9h16"
+              stroke="currentColor"
+              stroke-width="1.7"
+              stroke-linecap="round"
+            />
+            <rect
+              x="4"
+              y="5"
+              width="16"
+              height="16"
+              rx="2"
+              stroke="currentColor"
+              stroke-width="1.7"
+            />
+          </svg>
+          Última atualização: Maio de 2021
+        </div>
+      </div>
+    </section>
+
+    <div class="privacy-layout">
+      <aside class="privacy-nav">
+        <div class="nav-title">Nesta página</div>
+
+        <nav>
+          @for (s of sections; track s.id) {
+            <a [href]="'#' + s.id" [class.active]="activeId === s.id" (click)="goTo($event, s.id)">
+              {{ s.label }}
+            </a>
+          }
+        </nav>
+      </aside>
+
+      <article class="privacy-content">
+        <section class="intro-card">
+          <p>
+            Na <strong>BR VOICE COMUNICAÇÃO, CONSULTORIA E COMÉRCIO LTDA</strong>, privacidade e
+            segurança são prioridades e nos comprometemos com a transparência do tratamento de dados
+            pessoais dos nossos usuários/clientes.
+          </p>
+
+          <p>
+            Por isso, a presente Política de Privacidade estabelece como é feita a coleta, uso e
+            transferência de informações de clientes ou outras pessoas que acessam ou usam nosso
+            site.
+          </p>
+
+          <p>
+            Ao utilizar nossos serviços, você entende que coletaremos e usaremos suas informações
+            pessoais nas formas descritas nesta Política, sob as normas de Proteção de Dados (LGPD,
+            Lei Federal 13.709/2018), das disposições consumeristas da Lei Federal 8.078/1990 e
+            demais normas do ordenamento jurídico brasileiro aplicáveis.
+          </p>
+
+          <div class="company-card">
+            <div class="company-icon">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M12 3 20 6v5.5c0 4.7-3.2 8-8 9.5-4.8-1.5-8-4.8-8-9.5V6l8-3Z"
+                  stroke="currentColor"
+                  stroke-width="1.7"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="m8.5 12 2.2 2.2 4.8-5"
+                  stroke="currentColor"
+                  stroke-width="1.7"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+
+            <div>
+              <span>Controladora de Dados</span>
+              <strong>BR VOICE COMUNICAÇÃO, CONSULTORIA E COMÉRCIO LTDA</strong>
+              <small>CNPJ: 08.174.507/0001-73</small>
+            </div>
+          </div>
+        </section>
+
+        <section id="dados" class="privacy-section">
+          <div class="section-number">01</div>
+
+          <div class="section-body">
+            <h2>Quais dados coletamos sobre você e para qual finalidade?</h2>
+
+            <p>
+              Nosso site coleta e utiliza alguns dados pessoais seus, de forma a viabilizar a
+              prestação de serviços e aprimorar a experiência de uso.
+            </p>
+
+            <h3>1.1 Dados pessoais fornecidos pelo titular</h3>
+
+            <p>
+              Pelo formulário <strong>“Contato”</strong> são coletados o nome completo, e-mail,
+              telefone e um resumo do motivo do contato.
+            </p>
+
+            <p>
+              Pelo formulário <strong>“Trabalhe conosco”</strong> são coletados o nome completo,
+              e-mail, telefone e o CV do candidato, além de resumo do interesse do candidato.
+            </p>
+
+            <p>
+              Pelo formulário <strong>“Contate os serviços da BR Voice para sua empresa”</strong>
+              são coletados o nome completo, nome da empresa, e-mail corporativo e telefone.
+            </p>
+
+            <h3>1.2 Dados pessoais coletados automaticamente</h3>
+
+            <p>
+              O nosso site trabalha com cookies que visam facilitar a sua navegação, salvando
+              algumas preferências que são preenchidas automaticamente. Estes cookies duram um ano.
+            </p>
+          </div>
+        </section>
+
+        <section id="coleta" class="privacy-section">
+          <div class="section-number">02</div>
+
+          <div class="section-body">
+            <h2>Como coletamos os seus dados?</h2>
+
+            <p>
+              Os formulários são preenchidos espontaneamente pelo usuário. Os cookies são coletados
+              de forma automática. Para ambos é solicitada uma autorização ou é informada a nossa
+              política de privacidade.
+            </p>
+          </div>
+        </section>
+
+        <section id="consentimento" class="privacy-section">
+          <div class="section-number">03</div>
+
+          <div class="section-body">
+            <h2>Consentimento</h2>
+
+            <p>
+              É a partir do seu consentimento que tratamos seus dados pessoais. O consentimento é a
+              manifestação livre, informada e inequívoca pela qual você autoriza a
+              <strong>BR VOICE</strong> a tratar seus dados.
+            </p>
+
+            <p>
+              Assim, em consonância com a Lei Geral de Proteção de Dados, seus dados só serão
+              coletados, tratados e armazenados mediante prévio e expresso consentimento.
+            </p>
+
+            <p>
+              O seu consentimento será obtido de forma específica para cada finalidade acima
+              descrita, evidenciando o compromisso de transparência e boa-fé da BR VOICE para com
+              seus usuários/clientes.
+            </p>
+
+            <p>
+              Ao utilizar os serviços da BR VOICE e fornecer seus dados pessoais, você está ciente e
+              consentindo com as disposições desta Política de Privacidade, além de conhecer seus
+              direitos e como exercê-los.
+            </p>
+
+            <div class="highlight">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M12 3 20 6v5.5c0 4.7-3.2 8-8 9.5-4.8-1.5-8-4.8-8-9.5V6l8-3Z"
+                  stroke="currentColor"
+                  stroke-width="1.7"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="m8.5 12 2.2 2.2 4.8-5"
+                  stroke="currentColor"
+                  stroke-width="1.7"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+
+              <p>A qualquer tempo e sem nenhum custo, você poderá revogar seu consentimento.</p>
+            </div>
+
+            <p>
+              É importante destacar que a revogação do consentimento para o tratamento dos dados
+              pode implicar a impossibilidade da performance adequada de alguma funcionalidade do
+              site que dependa da operação. Tais consequências serão informadas previamente.
+            </p>
+          </div>
+        </section>
+
+        <section id="direitos" class="privacy-section">
+          <div class="section-number">04</div>
+
+          <div class="section-body">
+            <h2>Quais são os seus direitos?</h2>
+
+            <p>
+              A <strong>BR VOICE</strong> assegura a seus usuários/clientes seus direitos de titular
+              previstos no artigo 18 da Lei Geral de Proteção de Dados.
+            </p>
+
+            <div class="rights-grid">
+              <div class="right-card">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <circle cx="12" cy="12" r="8.5" stroke="currentColor" stroke-width="1.7" />
+                  <path
+                    d="M12 10v5"
+                    stroke="currentColor"
+                    stroke-width="1.7"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    d="M12 7.5h.01"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                </svg>
+                <span>Confirmar a existência de tratamento de dados.</span>
+              </div>
+
+              <div class="right-card">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M4 5h16v14H4z"
+                    stroke="currentColor"
+                    stroke-width="1.7"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M8 9h8M8 13h5"
+                    stroke="currentColor"
+                    stroke-width="1.7"
+                    stroke-linecap="round"
+                  />
+                </svg>
+                <span>Acessar seus dados.</span>
+              </div>
+
+              <div class="right-card">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="m5 12 4 4L19 6"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                <span>Corrigir seus dados.</span>
+              </div>
+
+              <div class="right-card">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M4 12h16M4 6h16M4 18h16"
+                    stroke="currentColor"
+                    stroke-width="1.7"
+                    stroke-linecap="round"
+                  />
+                </svg>
+                <span>Limitar dados desnecessários ou excessivos.</span>
+              </div>
+
+              <div class="right-card">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M4 7h16M7 4v16M17 4v16"
+                    stroke="currentColor"
+                    stroke-width="1.7"
+                    stroke-linecap="round"
+                  />
+                </svg>
+                <span>Solicitar a portabilidade de seus dados.</span>
+              </div>
+
+              <div class="right-card">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M5 7h14M9 7V4h6v3M7 7l1 13h8l1-13"
+                    stroke="currentColor"
+                    stroke-width="1.7"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                <span>Eliminar seus dados tratados a partir do consentimento.</span>
+              </div>
+
+              <div class="right-card">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M6 12a6 6 0 0 1 10.2-4.2L19 11"
+                    stroke="currentColor"
+                    stroke-width="1.7"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    d="M19 7v4h-4"
+                    stroke="currentColor"
+                    stroke-width="1.7"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M18 12a6 6 0 0 1-10.2 4.2L5 13"
+                    stroke="currentColor"
+                    stroke-width="1.7"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    d="M5 17v-4h4"
+                    stroke="currentColor"
+                    stroke-width="1.7"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                <span>Revogar seu consentimento.</span>
+              </div>
+
+              <div class="right-card">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M12 3a9 9 0 1 0 9 9"
+                    stroke="currentColor"
+                    stroke-width="1.7"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    d="M12 7v5l3 2"
+                    stroke="currentColor"
+                    stroke-width="1.7"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                <span>Informar-se sobre a possibilidade de não fornecer consentimento.</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="exercicio" class="privacy-section">
+          <div class="section-number">05</div>
+
+          <div class="section-body">
+            <h2>Como você pode exercer seus direitos de titular?</h2>
+
+            <p>
+              Para exercer seus direitos de titular, você deve entrar em contato com a
+              <strong>BR VOICE</strong> através dos seguintes meios:
+            </p>
+
+            <div class="contact-grid">
+              <a href="mailto:suporte@brvoice.com" class="contact-card">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <rect
+                    x="3"
+                    y="5"
+                    width="18"
+                    height="14"
+                    rx="2"
+                    stroke="currentColor"
+                    stroke-width="1.7"
+                  />
+                  <path
+                    d="m4 7 8 6 8-6"
+                    stroke="currentColor"
+                    stroke-width="1.7"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+
+                <div>
+                  <span>E-mail</span>
+                  <strong>suporte@brvoice.com</strong>
+                </div>
+              </a>
+
+              <a href="tel:+558132442016" class="contact-card">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M8.5 8.5c.3-.4.6-.4.9-.2l1.2 1c.3.2.3.5.1.8l-.5.7c.6 1.1 1.5 2 2.6 2.6l.7-.5c.3-.2.6-.2.8.1l1 1.2c.2.3.2.6-.2.9-.5.5-1.2.7-1.8.5-2.8-.8-5-3-5.8-5.8-.2-.6 0-1.3.5-1.8Z"
+                    stroke="currentColor"
+                    stroke-width="1.7"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+
+                <div>
+                  <span>Telefone</span>
+                  <strong>(81) 3244-2016</strong>
+                </div>
+              </a>
+            </div>
+
+            <p>
+              De forma a garantir a correta identificação como titular dos dados pessoais objeto da
+              solicitação, é possível que sejam solicitados documentos ou demais comprovações de sua
+              identidade. Nessa hipótese, você será informado previamente.
+            </p>
+          </div>
+        </section>
+
+        <section id="armazenamento" class="privacy-section">
+          <div class="section-number">06</div>
+
+          <div class="section-body">
+            <h2>Como e por quanto tempo seus dados serão armazenados?</h2>
+
+            <p>
+              Seus dados pessoais coletados pela <strong>BR VOICE</strong> serão utilizados e
+              armazenados durante o tempo necessário para a prestação do serviço ou para que as
+              finalidades elencadas nesta Política de Privacidade sejam atingidas.
+            </p>
+
+            <p>
+              De modo geral, seus dados serão mantidos enquanto a relação contratual entre você e a
+              BR VOICE perdurar.
+            </p>
+
+            <p>
+              Findado o período de armazenamento dos dados pessoais, estes serão excluídos de nossas
+              bases de dados ou anonimizados, ressalvadas as hipóteses legalmente previstas no
+              artigo 16 da Lei Geral de Proteção de Dados.
+            </p>
+
+            <ol>
+              <li>Cumprimento de obrigação legal ou regulatória pelo controlador.</li>
+              <li>
+                Estudo por órgão de pesquisa, garantida, sempre que possível, a anonimização dos
+                dados pessoais.
+              </li>
+              <li>
+                Transferência a terceiro, desde que respeitados os requisitos de tratamento de
+                dados.
+              </li>
+              <li>
+                Uso exclusivo do controlador, vedado seu acesso por terceiro, e desde que
+                anonimizados os dados.
+              </li>
+            </ol>
+
+            <p>
+              Informações pessoais imprescindíveis para o cumprimento de determinações legais,
+              judiciais e administrativas e/ou para o exercício do direito de defesa em processos
+              judiciais e administrativos serão mantidas, a despeito da exclusão dos demais dados.
+            </p>
+          </div>
+        </section>
+
+        <section id="seguranca" class="privacy-section">
+          <div class="section-number">07</div>
+
+          <div class="section-body">
+            <h2>O que fazemos para manter seus dados seguros?</h2>
+
+            <p>
+              Para mantermos suas informações pessoais seguras, usamos ferramentas físicas,
+              eletrônicas e gerenciais orientadas para a proteção da sua privacidade.
+            </p>
+
+            <p>
+              Aplicamos essas ferramentas levando em consideração a natureza dos dados pessoais
+              coletados, o contexto e a finalidade do tratamento e os riscos que eventuais violações
+              gerariam para os direitos e liberdades dos titulares.
+            </p>
+
+            <ul>
+              <li>Apenas pessoas autorizadas têm acesso aos seus dados pessoais.</li>
+              <li>
+                O acesso aos seus dados pessoais é feito somente após o compromisso de
+                confidencialidade.
+              </li>
+              <li>Seus dados pessoais são armazenados em ambiente seguro e idôneo.</li>
+            </ul>
+
+            <p>
+              A BR VOICE se compromete a adotar as melhores posturas para evitar incidentes de
+              segurança. Contudo, nenhuma página virtual é inteiramente segura e livre de riscos.
+            </p>
+
+            <p>
+              Em caso de incidentes de segurança que possam gerar risco ou dano relevante,
+              comunicaremos aos afetados e à Autoridade Nacional de Proteção de Dados sobre o
+              ocorrido, em consonância com as disposições da Lei Geral de Proteção de Dados.
+            </p>
+          </div>
+        </section>
+
+        <section id="compartilhamento" class="privacy-section">
+          <div class="section-number">08</div>
+
+          <div class="section-body">
+            <h2>Com quem seus dados podem ser compartilhados?</h2>
+
+            <p>
+              Tendo em vista a preservação de sua privacidade, a <strong>BR VOICE</strong>
+              não compartilhará seus dados pessoais com nenhum terceiro não autorizado.
+            </p>
+
+            <p>
+              Seus dados poderão ser compartilhados com nossos parceiros comerciais na medida
+              necessária para a prestação dos serviços contratados.
+            </p>
+
+            <p>
+              Estes recebem seus dados apenas na medida do necessário para a prestação dos serviços
+              contratados e nossos contratos são orientados pelas normas de proteção de dados do
+              ordenamento jurídico brasileiro.
+            </p>
+
+            <p>
+              Além disso, também existem outras hipóteses em que seus dados poderão ser
+              compartilhados:
+            </p>
+
+            <ol>
+              <li>Determinação legal, requerimento, requisição ou ordem judicial.</li>
+              <li>Caso de movimentações societárias, como fusão, aquisição e incorporação.</li>
+              <li>
+                Proteção dos direitos da BR VOICE em qualquer tipo de conflito, inclusive os de teor
+                judicial.
+              </li>
+            </ol>
+
+            <h3>8.1 Transferência internacional de dados</h3>
+
+            <p>
+              Alguns dos terceiros com quem compartilhamos seus dados podem estar localizados ou
+              possuir instalações em países estrangeiros.
+            </p>
+
+            <p>
+              Nessas condições, seus dados pessoais estarão sujeitos à Lei Geral de Proteção de
+              Dados e às demais legislações brasileiras de proteção de dados.
+            </p>
+
+            <p>
+              A BR VOICE se compromete a sempre adotar eficientes padrões de segurança cibernética e
+              de proteção de dados.
+            </p>
+          </div>
+        </section>
+
+        <section id="cookies" class="privacy-section">
+          <div class="section-number">09</div>
+
+          <div class="section-body">
+            <h2>Cookies ou dados de navegação</h2>
+
+            <p>
+              A <strong>BR VOICE</strong> faz uso de Cookies, que são arquivos de texto enviados
+              pela plataforma ao seu computador e que nele se armazenam, contendo informações
+              relacionadas à navegação do site.
+            </p>
+
+            <p>Em suma, os Cookies são utilizados para aprimorar a experiência de uso.</p>
+
+            <p>
+              Ao acessar nosso site e consentir com o uso de Cookies, você manifesta conhecer e
+              aceitar a utilização de um sistema de coleta de dados de navegação em seu dispositivo.
+            </p>
+
+            <p>
+              A BR VOICE utiliza Cookies e você pode, a qualquer tempo e sem nenhum custo, alterar
+              as permissões, bloquear ou recusar os Cookies.
+            </p>
+
+            <div class="cookie-link">
+              <div>
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M20 11.5a8 8 0 0 1-11.8 7L4 20l1.5-4.1A8 8 0 1 1 20 11.5Z"
+                    stroke="currentColor"
+                    stroke-width="1.7"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M8.5 8.5c.3-.4.6-.4.9-.2l1.2 1c.3.2.3.5.1.8l-.5.7c.6 1.1 1.5 2 2.6 2.6l.7-.5c.3-.2.6-.2.8.1l1 1.2c.2.3.2.6-.2.9-.5.5-1.2.7-1.8.5-2.8-.8-5-3-5.8-5.8-.2-.6 0-1.3.5-1.8Z"
+                    stroke="currentColor"
+                    stroke-width="1.7"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+
+                <span>Política de Cookies</span>
+              </div>
+
+              <svg class="arrow" viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M5 12h14M13 6l6 6-6 6"
+                  stroke="currentColor"
+                  stroke-width="1.7"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+          </div>
+        </section>
+
+        <section id="alteracoes" class="privacy-section">
+          <div class="section-number">10</div>
+
+          <div class="section-body">
+            <h2>Alteração desta Política de Privacidade</h2>
+
+            <p>
+              A atual versão da Política de Privacidade foi formulada e atualizada pela última vez
+              em <strong>Maio de 2021</strong>.
+            </p>
+
+            <p>
+              Reservamos o direito de modificar esta Política de Privacidade a qualquer tempo,
+              principalmente em função da adequação a eventuais alterações feitas em nosso site ou
+              em âmbito legislativo.
+            </p>
+
+            <p>Recomendamos que você a revise com frequência.</p>
+
+            <p>
+              Eventuais alterações entrarão em vigor a partir de sua publicação em nosso site e
+              sempre lhe notificaremos acerca das mudanças ocorridas.
+            </p>
+          </div>
+        </section>
+
+        <section id="responsabilidade" class="privacy-section">
+          <div class="section-number">11</div>
+
+          <div class="section-body">
+            <h2>Responsabilidade</h2>
+
+            <p>
+              A <strong>BR VOICE</strong> prevê a responsabilidade dos agentes que atuam nos
+              processos de tratamento, em conformidade com os artigos 42 ao 45 da Lei Geral de
+              Proteção de Dados.
+            </p>
+
+            <p>
+              Nos comprometemos em manter esta Política de Privacidade atualizada, observando suas
+              disposições e zelando por seu cumprimento.
+            </p>
+
+            <h3>11.1 Isenção de responsabilidade</h3>
+
+            <p>
+              Embora adotemos elevados padrões de segurança a fim de evitar incidentes, não há
+              nenhuma página virtual inteiramente livre de riscos.
+            </p>
+
+            <ol>
+              <li>
+                Quaisquer consequências decorrentes da negligência, imprudência ou imperícia dos
+                usuários em relação aos seus dados individuais.
+              </li>
+              <li>
+                Ações maliciosas de terceiros, como ataques de hackers, exceto se comprovada conduta
+                culposa ou deliberada da BR VOICE.
+              </li>
+              <li>
+                Inveracidade das informações inseridas pelo usuário/cliente nos registros
+                necessários para utilização dos serviços.
+              </li>
+            </ol>
+          </div>
+        </section>
+
+        <section id="encarregado" class="privacy-section">
+          <div class="section-number">12</div>
+
+          <div class="section-body">
+            <h2>Encarregado de Proteção de Dados</h2>
+
+            <p>
+              A <strong>BR VOICE</strong> disponibiliza os seguintes meios para que você possa
+              entrar em contato conosco para exercer seus direitos de titular:
+            </p>
+
+            <div class="contact-grid">
+              <a href="mailto:suporte@brvoice.com" class="contact-card">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <rect
+                    x="3"
+                    y="5"
+                    width="18"
+                    height="14"
+                    rx="2"
+                    stroke="currentColor"
+                    stroke-width="1.7"
+                  />
+                  <path
+                    d="m4 7 8 6 8-6"
+                    stroke="currentColor"
+                    stroke-width="1.7"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+
+                <div>
+                  <span>E-mail</span>
+                  <strong>suporte@brvoice.com</strong>
+                </div>
+              </a>
+
+              <a href="tel:+558132442016" class="contact-card">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M8.5 8.5c.3-.4.6-.4.9-.2l1.2 1c.3.2.3.5.1.8l-.5.7c.6 1.1 1.5 2 2.6 2.6l.7-.5c.3-.2.6-.2.8.1l1 1.2c.2.3.2.6-.2.9-.5.5-1.2.7-1.8.5-2.8-.8-5-3-5.8-5.8-.2-.6 0-1.3.5-1.8Z"
+                    stroke="currentColor"
+                    stroke-width="1.7"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+
+                <div>
+                  <span>Telefone</span>
+                  <strong>(81) 3244-2016</strong>
+                </div>
+              </a>
+            </div>
+
+            <div class="dpo-card">
+              <div class="dpo-icon">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M12 3a9 9 0 1 0 9 9"
+                    stroke="currentColor"
+                    stroke-width="1.7"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    d="M12 7v5l3 2"
+                    stroke="currentColor"
+                    stroke-width="1.7"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+
+              <div>
+                <span>Encarregados</span>
+                <strong>EDINALDO LIMA</strong>
+                <a href="mailto:elima@brovice.com">elima@brovice.com</a>
+
+                <strong>FERNANDO ARMINANTE DOLL</strong>
+                <a href="mailto:fdoll@brvoice.com">fdoll@brvoice.com</a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </article>
+    </div>
+  </main>
+
+  <footer class="privacy-footer">
+    <div>
+      <strong>BR VOICE</strong>
+      <span>Comunicação, Consultoria e Comércio</span>
+    </div>
+
+    <div class="footer-credit">
+      <span>Desenvolvido por</span>
+      <a href="https://www.linkedin.com/in/pedrogalvao0" target="_blank" rel="noopener">
+        Pedro Galvão
+      </a>
+    </div>
+
+    <span>Política de Privacidade · Maio de 2021</span>
+  </footer>
+</div>
